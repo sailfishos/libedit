@@ -1,0 +1,27 @@
+Name: libedit
+Summary: The NetBSD Editline library
+Version: 3.0_snap20090923
+Release: 1
+Group: System/Libraries
+License: BSD
+URL: http://www.thrysoee.dk/editline/
+Sources:
+    - http://www.thrysoee.dk/editline/%{name}-20090923-3.0.tar.gz
+Patches:
+    - tgetent.patch
+Description: |
+    Libedit is an autotool- and libtoolized port of the NetBSD Editline library.
+    It provides generic line editing, history, and tokenization functions, similar
+    to those found in GNU Readline.
+
+PkgBR:
+    - gawk
+PkgConfigBR:
+    - ncurses
+SubPackages:
+    - Name: devel
+      Summary: Development files for %{name}
+      Group: Development/Libraries
+      Description: This package contains development files for %{name}.
+      Requires:
+        - ncurses-devel

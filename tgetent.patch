@@ -1,0 +1,13 @@
+Index: libedit-20080712-2.11/configure.ac
+===================================================================
+--- libedit-20080712-2.11.orig/configure.ac
++++ libedit-20080712-2.11/configure.ac
+@@ -23,7 +23,7 @@ AC_PROG_LN_S
+ AC_PROG_AWK
+ EL_MANTYPE
+ 
+-AC_CHECK_LIB(curses, tgetent,,
++AC_CHECK_LIB(tinfo, tgetent,,
+    [AC_CHECK_LIB(ncurses, tgetent,,
+       [AC_MSG_ERROR([libtermcap, libcurses or libncurses are required!])] )] )
+ 
